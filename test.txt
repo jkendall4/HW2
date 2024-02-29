@@ -1,1 +1,8 @@
 New-Item -ItemType File -Path "$env:USERPROFILE\CSCI185_HW02\test.txt"
+Set-Content -Path "$env:USERPROFILE\CSCI185_HW02\test.txt" -Value "The first line"
+Add-Content -Path "$env:USERPROFILE\CSCI185_HW02\test.txt" -Value "The second line"
+Get-Content -Path "$env:USERPROFILE\CSCI185_HW02\test.txt"
+Copy-Item -Path "$env:USERPROFILE\CSCI185_HW02" -Destination "$env:USERPROFILE\CSCI185_HW02_copy" -Recurse
+Set-Location -Path "$env:USERPROFILE\CSCI185_HW02_copy"
+Get-ChildItem
+Remove-Item -Path "$env:USERPROFILE\CSCI185_HW02_copy" -Recurse -Force
